@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task4 - Day1</title>
+    <script>
+      let n1 = prompt("Enter first number");
+      let n2 = prompt("Enter second number");
+      let n3 = prompt("Enter third number");
+      if (!n1 || !n2 || !n3) {
+        document.write("You have to enter value");
+      } else {
+        if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+          document.write("You have to enter numaric value");
+        } else {
+          dev(n1, n2, n3);
+        }
+      }
+      function dev(n1, n2, n3) {
+        let x = Number(n1);
+        let y = Number(n2);
+        let z = Number(n3);
+        if (x % y === 0 && x % z === 0) {
+          document.write(x, " ", "is divisible by", " ", y, " ", "and", " ", z);
+        } else if (x % y === 0 && x % z !== 0) {
+          document.write(x, " ", "is divisible by", " ", y);
+        } else if (x % y !== 0 && x % z === 0) {
+          document.write(x, " ", "is divisible by", " ", z);
+        } else {
+          document.write(
+            x,
+            " ",
+            "is not divisible by",
+            " ",
+            y,
+            " ",
+            "and",
+            " ",
+            z
+          );
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

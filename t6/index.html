@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Task6 - Enhanced</title>
+    <style>
+      .output {
+        font-size: 40px;
+        font-family: monospace;
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="output" id="starOutput"></div>
+
+    <script>
+      function stars(numOfRows, alignment) {
+        const container = document.getElementById("starOutput");
+        let result = "";
+        if (alignment === "left") {
+          for (let i = 1; i <= numOfRows; i++) {
+            result += "*".repeat(i) + "\n";
+          }
+        } else if (alignment === "right") {
+          for (let i = 1; i <= numOfRows; i++) {
+            result += " ".repeat(numOfRows - i) + "*".repeat(i) + "\n";
+          }
+        } else if (alignment === "center") {
+          for (let i = 1; i <= numOfRows; i++) {
+            result +=
+              " ".repeat(numOfRows - i) +
+              "*".repeat(i) +
+              "*".repeat(i - 1) +
+              "\n";
+          }
+        }
+        container.textContent = result;
+      }
+      let rows = prompt("num of rows");
+      let align = prompt("left or right or center");
+      stars(rows, align);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task1 - Day1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: rgb(210, 208, 208);
+        height: 100vh;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    </style>
+    <script>
+      const num = prompt("inter number of headers form 1 to 6");
+      if (!(num >= 7)) {
+        for (let i = 1; i <= num; i++) {
+          document.write(`<h${i}>this is header number ${i}</h${i}>`);
+        }
+      }else {
+        document.write(`<h1>enter numbers from 1 to 6</h1>`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task5 - Day1</title>
+    <script>
+      function countNumbers(x, y) {
+        let accThree = [];
+        let accFive = [];
+        for (let i = x; i <= y; i++) {
+          if (i % 3 === 0) {
+            accThree.push(i);
+          } else if (i % 5 === 0) {
+            accFive.push(i);
+          }
+        }
+        console.log("3", accThree);
+        console.log("5", accFive);
+      }
+      countNumbers(1, 10);
+    </script>
+  </head>
+  <body></body>
+</html>
